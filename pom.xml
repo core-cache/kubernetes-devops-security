@@ -15,10 +15,13 @@
 	<name>numeric</name>
 	<description>Demo for DevSecOps</description>
 
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<tomcat.version>9.0.43</tomcat.version>
+		<spring-security.version>5.4.4</spring-security.version>
 	</properties>
 
 	<dependencies>
@@ -37,6 +40,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
