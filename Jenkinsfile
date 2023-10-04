@@ -51,7 +51,7 @@ pipeline {
   }
 
   stages {
-      /*
+
       stage('Build Artifact - Maven') {
             steps {
               sh "mvn clean package -DskipTests=true"
@@ -169,14 +169,14 @@ pipeline {
                     sh 'bash zap.sh'
                 }
             }
-       } */
+       }
 
-       stage('Test Slack') {
+     /*  stage('Test Slack') {
          steps {
             sh "exit 0"
          }
        }
-
+*/
     }// Stages
 
 
@@ -188,7 +188,7 @@ pipeline {
             dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'owasp-zap-report', reportFiles: 'zap_report.html', reportName: 'OWASP ZAP HTML Report', reportTitles: 'OWASP ZAP HTML Report'])
 
-            sendNotification currentBuild.result
+           // sendNotification currentBuild.result
         }
   }
 
